@@ -1,0 +1,27 @@
+{% extends 'weather/layout.html' %}
+
+{% block content %}
+<div class="weather">
+    <div class="weather_now">
+        <p>Город: {{current.city}}</p>
+        <p>Сейчас: {{current.temp}}°С</p>
+        <p>Ощущается как {{current.feels}}°С</p>
+        <div class="weather_desc">
+            <p><img src="{{current.icon}}"></p>
+            <p>{{current.description|capfirst}}</p>
+        </div>
+    </div>
+    <div class="weather_today">
+
+            {% for hour in hours %}
+                <div class="today_hour">
+                    <p>{{hour.temp}}°C</p>
+                    <p>{{hour.date}}</p>
+                    <p><img src="{{hour.icon}}"></p>
+                </div>
+            {% endfor %}
+
+    </div>
+    <input name="myFile" type="file">
+</div>
+{% endblock %}

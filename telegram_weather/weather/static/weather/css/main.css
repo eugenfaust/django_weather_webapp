@@ -1,0 +1,51 @@
+:root {
+    --tg-theme-bg-color: gray;
+    --tg-theme-button-color: blue;
+    --tg-theme-secondary-bg-color: white;
+    --tg-theme-text-color: white;
+}
+body {
+    background: var(--tg-theme-bg-color);
+}
+.weather {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-secondary-bg-color)
+    text-align: center;
+}
+.weather_now {
+    border: 5px solid var(--tg-theme-button-color);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.weather_today {
+    margin: 5px;
+    border: 5px solid var(--tg-theme-button-color);
+}
+.weather_today img {
+    width: 50px;
+    height: 50px;
+}
+.today_hour {
+    display: flex;
+    border-bottom: 5px solid var(--tg-theme-button-color);
+}
+.weather_desc {
+    display: flex;
+    flex-direction: column;
+}
+.weather p {
+    margin: auto;
+}
+.weather_now p {
+    margin-top: 2px;
+    padding-bottom: 2px;
+}

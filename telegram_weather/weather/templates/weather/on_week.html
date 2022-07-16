@@ -1,0 +1,17 @@
+{% extends 'weather/layout.html' %}
+
+{% block content %}
+<div class="weather" style="top: 30%;">
+    <div class="weather_today">
+
+            {% for day in days %}
+                <div class="today_hour">
+                    <p>{{day.temp}}°C</p>
+                    <p>{{day.date}}</p>
+                    <p><img src="{{day.icon}}"></p>
+                </div>
+            {% endfor %}
+
+    </div>
+</div>
+{% endblock %}
